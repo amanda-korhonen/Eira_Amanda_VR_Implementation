@@ -8,7 +8,7 @@ public class TwistGrab : Interactive
     public new void Interact()
     {
         isGrabbed = true;
-        rb = GetComponent<Rigidbody>();
+        GetComponent<Rigidbody>().transform.Rotate(0,1,0);
     }
    
 }
