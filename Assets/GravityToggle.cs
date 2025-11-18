@@ -6,7 +6,6 @@ public class GravityToggle : Interactive
     // Updated this to be able to see it in multiplayer on 17.11.2025
     PhotonView pv;
     private Rigidbody rb;
-    bool gravity = true;
 
     void Start()
     {
@@ -18,23 +17,17 @@ public class GravityToggle : Interactive
     {
         if (pv == null) return;
         // When interacted, ask ALL players to kick the object
-        pv.RPC("SetGravity", RpcTarget.AllBuffered, gravity);
+        pv.RPC("EnableGravity", RpcTarget.AllBuffered);
     }
 
     [PunRPC]
 
     // The logic does not work should return the position
     // of the cube and toggle off gravity
-    void SetGravity(bool gravity)
+    void EnableGravity()
     {
-        if(gravity == true)
-        {
+        if (rb == null) rb = GetComponent<Rigidbody>();
+        if (rb != null)
             rb.useGravity = true;
-        }else
-        {
-            rb.position = new Vector3(-1.27f, 1.8f, 1.81f);
-            rb.useGravity = false;
-            
-        }
     }
 }

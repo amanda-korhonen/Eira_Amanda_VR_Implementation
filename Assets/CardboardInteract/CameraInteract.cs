@@ -15,12 +15,16 @@ public class CameraInteract : MonoBehaviour
     [SerializeField] float defaultDwellTimer = 1.5f;
     [SerializeField] float defaultTwistMultiplier = 6f;
     [SerializeField] float maxInteractDistance = 30f;
+    [SerializeField] float playerHeight = 1.7f;
     [SerializeField] LayerMask interactLayer = ~0;
     [SerializeField] GameObject dwellCircle;
     [SerializeField] GameObject twistCrosshair;
     [SerializeField] GameObject reticle;
     [SerializeField] Material otherCrosshair;
+    [SerializeField] Transform player;
+    static CameraInteract instance;
     public static Interactive selected = null;
+    static RaycastHit hit;
     InteractMode lastMode = InteractMode.Twist;
     public static float dwellTimer = 1.5f;
     public static float twistMultiplier = 6f;
@@ -29,9 +33,20 @@ public class CameraInteract : MonoBehaviour
     int twistVisual = 0;
     bool rollReset = true;
 
+    public static RaycastHit GetLatestHit() { return hit; }
+    public static Transform GetPlayerTransform()
+    {
+        return instance.player ? instance.player : Camera.main.transform.parent;
+    }
+    public static float GetPlayerHeight() {  return instance.playerHeight; }
+
+    private void Start()
+    {
+        instance = this;
+    }
+
     void Update()
     {
-        RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, maxInteractDistance, interactLayer) && hit.transform.GetComponent<Interactive>())
         {
             if (!selected || hit.transform.gameObject != selected.gameObject)
