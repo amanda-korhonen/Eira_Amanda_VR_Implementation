@@ -38,7 +38,12 @@ public class HeadAvatarController : MonoBehaviourPun
 
         // Copy *rotation only*. Position stays at the spawn (set by the rig in NetBootstrap)
         transform.rotation = cam.rotation;
+        //Trying to lock the height
+        Vector3 pos = cam.position;
+        pos.y = 1.6f; // Keep head at fixed height
+        transform.position = pos;
+
         // Now updating the position, too
-        transform.position = cam.position;
+        //transform.position = cam.position;
     }
 }
