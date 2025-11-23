@@ -22,7 +22,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.collab-proxy": {
-      "version": "2.10.0",
+      "version": "2.10.2",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -34,8 +34,8 @@
       "source": "registry",
       "dependencies": {
         "com.unity.burst": "1.8.17",
-        "com.unity.nuget.mono-cecil": "1.11.4",
         "com.unity.test-framework": "1.4.5",
+        "com.unity.nuget.mono-cecil": "1.11.4",
         "com.unity.test-framework.performance": "3.0.3"
       },
       "url": "https://packages.unity.com"
@@ -139,7 +139,7 @@
       }
     },
     "com.unity.render-pipelines.universal": {
-      "version": "17.2.0",
+      "version": "17.0.3",
       "depth": 0,
       "source": "builtin",
       "dependencies": {
@@ -242,7 +242,7 @@
       }
     },
     "com.unity.visualscripting": {
-      "version": "1.9.8",
+      "version": "1.9.9",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -266,9 +266,9 @@
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.modules.subsystems": "1.0.0",
         "com.unity.modules.vr": "1.0.0",
         "com.unity.modules.xr": "1.0.0",
+        "com.unity.modules.subsystems": "1.0.0",
         "com.unity.xr.legacyinputhelpers": "2.1.7"
       },
       "url": "https://packages.unity.com"
