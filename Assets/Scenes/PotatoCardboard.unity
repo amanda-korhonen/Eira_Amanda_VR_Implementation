@@ -167,6 +167,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5885627884220457281, guid: dd851e949f988b7418dbb01b6b77856d, type: 3}
+      propertyPath: targetScene
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8762386174895041432, guid: dd851e949f988b7418dbb01b6b77856d, type: 3}
       propertyPath: m_Name
       value: Door
@@ -284,8 +288,8 @@ Transform:
   m_GameObject: {fileID: 550942186}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.39, y: -0.75, z: 3.8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -4.32, y: -0.75, z: 3.65}
+  m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -352,6 +356,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3325053040115925120, guid: e8cb7fc0989826942b1bc422b696a740, type: 3}
   m_PrefabInstance: {fileID: 599047469}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &599047471 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7519213345710383441, guid: e8cb7fc0989826942b1bc422b696a740, type: 3}
+  m_PrefabInstance: {fileID: 599047469}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5caf0b4821e0f554b85b6a244d8c2fd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &609850729
 GameObject:
   m_ObjectHideFlags: 0
@@ -1518,6 +1533,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7391047669053648271, guid: e0eff41fc0c674846828ccf69e91f791, type: 3}
+      propertyPath: fadeScreen
+      value: 
+      objectReference: {fileID: 599047471}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
