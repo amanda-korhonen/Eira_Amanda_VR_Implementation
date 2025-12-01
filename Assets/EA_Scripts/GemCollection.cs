@@ -14,13 +14,21 @@ public class GemCollection : Interactive
 
     public new void Interact()
     {
-        if (pv == null) return; 
+        if (pv == null) return;
+        pv.RPC("CollectionEvent", RpcTarget.AllBuffered);
 
     }
+
+    [PunRPC]
   
     void CollectionEvent()
     {
         if (rb == null) rb = GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            Debug.Log("Gem collected!");
+            Destroy(this.rb);
+        }
 
     }
 
