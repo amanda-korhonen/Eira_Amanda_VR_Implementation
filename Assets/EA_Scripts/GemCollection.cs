@@ -1,14 +1,18 @@
 using UnityEngine;
 using Photon.Pun;
+using System;
 
 public class GemCollection : Interactive
 {
     private Rigidbody rb;
     PhotonView pv;
+    public AudioClip audioClip;
+    public float audioVolume = 1.0f;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // Start is called once before the first execution of Update after the MonoBehaviour is create
     void Start()
     {
+        pv = GetComponent<PhotonView>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -23,18 +27,18 @@ public class GemCollection : Interactive
   
     void CollectionEvent()
     {
-        if (rb == null) rb = GetComponent<Rigidbody>();
-        if (rb != null)
+        if (audioClip != null)
         {
-            Debug.Log("Gem collected!");
-            Destroy(this.rb);
+            GameObject tempAudioSource = new GameObject("TempAudio");
+            AudioSource audioSource = tempAudioSource.AddComponent<AudioSource>();
+            audioSource.clip = audioClip;
+            audioSource.volume = audioVolume;
+            audioSource.Play();
+            //Debug.Log("Playing audio clip at point with volume: " + audioVolume);
+            Destroy(tempAudioSource, audioClip.length);
         }
+        //Debug.Log("Gem collected!");
+        Destroy(gameObject);
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
