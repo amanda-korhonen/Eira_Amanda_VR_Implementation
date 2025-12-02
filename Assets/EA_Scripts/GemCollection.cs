@@ -34,7 +34,7 @@ public class GemCollection : Interactive
             audioSource.clip = audioClip;
             audioSource.volume = audioVolume;
             audioSource.Play();
-            //Debug.Log("Playing audio clip at point with volume: " + audioVolume);
+            //Debug.Log("Playing audio clip with volume: " + audioVolume);
             Destroy(tempAudioSource, audioClip.length);
         }
         //Debug.Log("Gem collected!");
