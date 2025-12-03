@@ -38,7 +38,10 @@ public class GemCollection : Interactive
             Destroy(tempAudioSource, audioClip.length);
         }
         //Debug.Log("Gem collected!");
+        if (GemCounter.Instance != null)
+        {
+            GemCounter.Instance.AddGem();
+        }
         Destroy(gameObject);
-
     }
 }
