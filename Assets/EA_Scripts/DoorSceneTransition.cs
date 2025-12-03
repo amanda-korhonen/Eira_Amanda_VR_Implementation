@@ -5,6 +5,8 @@ public class DoorSceneTransition : Interactive
     [SerializeField] private int targetScene;
     private Rigidbody rb;
     private SceneTransitionManager sceneTransitionManager;
+    //Controls if a door is locked or unlocked at the start of the game
+    //[SerializeField] private bool isUnlocked = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -17,6 +19,7 @@ public class DoorSceneTransition : Interactive
             Debug.LogError("SceneTransitionManager not found in the scene!");
         }
     }
+    //TODO: make the lock unlock system
 
     public new void Interact()
     {
