@@ -7,6 +7,10 @@ public class BoxOfPotatoes : MonoBehaviour
     public int toBeCollected = 5;
     public TMP_Text counterText;
 
+    //audio 
+    public AudioClip audioClip;
+    public float audioVolume = 1.0f;
+
     private void UpdateUI()
     {
         counterText.text = $"{collected}/{toBeCollected}";
@@ -25,7 +29,7 @@ public class BoxOfPotatoes : MonoBehaviour
         if (potato != null && potato.type == PotatoQuality.Good)
         {
             collected++;
-            UpdateUI();
+            UpdateUI(); //update UI (aka counter) only when triggered
         }
     }
 
@@ -35,13 +39,22 @@ public class BoxOfPotatoes : MonoBehaviour
         if (potato != null && potato.type == PotatoQuality.Good)
         {
             collected--;
-            UpdateUI();
+            UpdateUI(); //update UI (aka counter) only when triggered
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    void CollectionEvent()
     {
-        UpdateUI();
+        if (audioClip != null)
+        {
+            GameObject tempAudioSource = new GameObject("TempAudio");
+            AudioSource audioSource = tempAudioSource.AddComponent<AudioSource>();
+            audioSource.clip = audioClip;
+            audioSource.volume = audioVolume;
+            audioSource.Play();
+            //Debug.Log("Playing audio clip with volume: " + audioVolume);
+            Destroy(tempAudioSource, audioClip.length);
+        }
+        
     }
 }
