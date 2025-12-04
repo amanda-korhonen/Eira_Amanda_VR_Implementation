@@ -13,6 +13,10 @@ public class PotatoDistributer : MonoBehaviour {
     //define area (mud field size) where potatoes go
     public Vector3 areaSize = new Vector3(1, 1, 2);
 
+    //audio 
+    public AudioClip audioClip;
+    public float audioVolume = 1.0f;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -33,7 +37,22 @@ public class PotatoDistributer : MonoBehaviour {
             );
 
             //apply the random position to the prefab
-            Instantiate(prefab, transform.position + randomPos, Quaternion.identity);
+            Instantiate(prefab, randomPos, Quaternion.identity);
         }
+    }
+
+    void CollectionEvent()
+    {
+        if (audioClip != null)
+        {
+            GameObject tempAudioSource = new GameObject("TempAudio");
+            AudioSource audioSource = tempAudioSource.AddComponent<AudioSource>();
+            audioSource.clip = audioClip;
+            audioSource.volume = audioVolume;
+            audioSource.Play();
+            //Debug.Log("Playing audio clip with volume: " + audioVolume);
+            Destroy(tempAudioSource, audioClip.length);
+        }
+
     }
 }

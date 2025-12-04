@@ -30,6 +30,7 @@ public class BoxOfPotatoes : MonoBehaviour
         {
             collected++;
             UpdateUI(); //update UI (aka counter) only when triggered
+            CollectionEvent();
         }
     }
 
@@ -43,6 +44,7 @@ public class BoxOfPotatoes : MonoBehaviour
         }
     }
 
+    
     void CollectionEvent()
     {
         if (audioClip != null)

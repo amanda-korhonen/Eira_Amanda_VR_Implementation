@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3537170361327357987}
   - component: {fileID: 6975936636335700880}
   - component: {fileID: 2671286844930271666}
+  - component: {fileID: 4748779151153108921}
   m_Layer: 0
   m_Name: GoodPotato
   m_TagString: Untagged
@@ -209,3 +210,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+--- !u!114 &4748779151153108921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3130301553958238798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44498009fcbd0f94d899b0213c2608d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
