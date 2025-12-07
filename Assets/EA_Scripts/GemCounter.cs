@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -9,14 +8,11 @@ public class GemCounter : MonoBehaviour
     public int toBeCollected = 10;
     public TMP_Text counterText;
     public static GemCounter Instance;
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    private bool hasTriggeredUnlock = false;
     private void Awake()
     {
-        if (Instance == null)
-            Instance = this;
-        else
-            Destroy(gameObject);
+        Instance = this;
     }
 
     private void Start()
@@ -28,8 +24,22 @@ public class GemCounter : MonoBehaviour
     {
         collected++;
         UpdateUI();
-    }
 
+        if(!hasTriggeredUnlock && collected >= toBeCollected)
+        {
+            hasTriggeredUnlock = true;
+
+            if (TaskProgress.Instance != null)
+            {
+                TaskProgress.Instance.moonDoorUnlocked = true;
+                Debug.Log("Door unlocked.");
+            }
+            else
+            {
+                Debug.LogError("TaskProgress is NULL — it is NOT in the scene!");
+            }
+        }
+    }
     private void UpdateUI()
     {
         if (counterText != null)

@@ -1,11 +1,13 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Photon.Pun;
 
 public class SceneTransitionManager : MonoBehaviour
 {
     public FadeScreen fadeScreen;
 
+    // Currently 12/2025 the regular GoToScene is not in use
     public void GoToScene(int sceneIndex)
     {
         StartCoroutine(GoToSceneRoutine(sceneIndex));

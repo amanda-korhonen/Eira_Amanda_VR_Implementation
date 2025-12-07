@@ -1149,6 +1149,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8173596068610002586, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
+      propertyPath: isUnlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8173596068610002586, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
       propertyPath: targetScene
       value: 0
       objectReference: {fileID: 0}
