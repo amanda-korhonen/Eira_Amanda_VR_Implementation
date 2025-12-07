@@ -188,6 +188,14 @@ PrefabInstance:
       propertyPath: targetScene
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8173596068610002586, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
+      propertyPath: audioClipDoorLocked
+      value: 
+      objectReference: {fileID: 8300000, guid: 391f85b0c86ba29449b04ff49677d569, type: 3}
+    - target: {fileID: 8173596068610002586, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
+      propertyPath: audioClipDoorUnlocked
+      value: 
+      objectReference: {fileID: 8300000, guid: b8b2f7f526c5b034b8712d8d895d2b8b, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 665989987475314208, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
@@ -1307,6 +1315,18 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1951259093764581498, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1951259093764581498, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1951259093764581498, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
+      propertyPath: m_Center.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2246883144051427465, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0.5
@@ -1321,15 +1341,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7721925826927471955, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.41
+      value: 6.94
       objectReference: {fileID: 0}
     - target: {fileID: 7721925826927471955, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.84999996
+      value: -0.836
       objectReference: {fileID: 0}
     - target: {fileID: 7721925826927471955, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.3
+      value: 7.2
       objectReference: {fileID: 0}
     - target: {fileID: 7721925826927471955, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1363,6 +1383,14 @@ PrefabInstance:
       propertyPath: isUnlocked
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8173596068610002586, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
+      propertyPath: audioClipDoorLocked
+      value: 
+      objectReference: {fileID: 8300000, guid: 391f85b0c86ba29449b04ff49677d569, type: 3}
+    - target: {fileID: 8173596068610002586, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
+      propertyPath: audioClipDoorUnlocked
+      value: 
+      objectReference: {fileID: 8300000, guid: b8b2f7f526c5b034b8712d8d895d2b8b, type: 3}
     - target: {fileID: 8674958570814315680, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
       propertyPath: m_VerticalAlignment
       value: 512
@@ -2076,7 +2104,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 447705586442039914, guid: 53b6b2d157a189b44b9ee3d5d8d0cba3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.15
+      value: 3.21
       objectReference: {fileID: 0}
     - target: {fileID: 447705586442039914, guid: 53b6b2d157a189b44b9ee3d5d8d0cba3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3226,21 +3254,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8098936364177620179}
     m_Modifications:
+    - target: {fileID: 1951259093764581498, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1951259093764581498, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
+      propertyPath: m_Center.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4901476636407632903, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
       propertyPath: m_Name
       value: GardenDoor
       objectReference: {fileID: 0}
     - target: {fileID: 7721925826927471955, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.43
+      value: 7.02
       objectReference: {fileID: 0}
     - target: {fileID: 7721925826927471955, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.84999996
+      value: -0.83
       objectReference: {fileID: 0}
     - target: {fileID: 7721925826927471955, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.75
+      value: -0.91
       objectReference: {fileID: 0}
     - target: {fileID: 7721925826927471955, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3278,6 +3314,14 @@ PrefabInstance:
       propertyPath: targetScene
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8173596068610002586, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
+      propertyPath: audioClipDoorLocked
+      value: 
+      objectReference: {fileID: 8300000, guid: 391f85b0c86ba29449b04ff49677d569, type: 3}
+    - target: {fileID: 8173596068610002586, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
+      propertyPath: audioClipDoorUnlocked
+      value: 
+      objectReference: {fileID: 8300000, guid: b8b2f7f526c5b034b8712d8d895d2b8b, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 665989987475314208, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}

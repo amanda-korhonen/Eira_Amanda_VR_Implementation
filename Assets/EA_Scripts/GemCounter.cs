@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using UnityEngine;
 
@@ -31,8 +30,8 @@ public class GemCounter : MonoBehaviour
 
             if (TaskProgress.Instance != null)
             {
-                TaskProgress.Instance.moonDoorUnlocked = true;
-                Debug.Log("Door unlocked.");
+                TaskProgress.Instance.bedTaskCompleted = true;
+                Debug.Log("Bedroom task completed!");
             }
             else
             {

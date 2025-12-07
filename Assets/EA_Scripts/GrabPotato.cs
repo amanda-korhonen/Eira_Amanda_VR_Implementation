@@ -1,6 +1,4 @@
-using System.Drawing;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class GrabPotato : MonoBehaviour
 {

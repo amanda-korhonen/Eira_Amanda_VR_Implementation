@@ -1186,6 +1186,14 @@ PrefabInstance:
       propertyPath: targetScene
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8173596068610002586, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
+      propertyPath: audioClipDoorLocked
+      value: 
+      objectReference: {fileID: 8300000, guid: 391f85b0c86ba29449b04ff49677d569, type: 3}
+    - target: {fileID: 8173596068610002586, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
+      propertyPath: audioClipDoorUnlocked
+      value: 
+      objectReference: {fileID: 8300000, guid: b8b2f7f526c5b034b8712d8d895d2b8b, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 665989987475314208, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
@@ -1443,7 +1451,7 @@ Transform:
   m_GameObject: {fileID: 907292807}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: 1.75, z: -1.38}
+  m_LocalPosition: {x: 6, y: 1.6, z: -1.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3252,7 +3260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collected: 0
-  toBeCollected: 2
+  toBeCollected: 1
   counterText: {fileID: 322695356571292424}
 --- !u!33 &1381547703081893825
 MeshFilter:

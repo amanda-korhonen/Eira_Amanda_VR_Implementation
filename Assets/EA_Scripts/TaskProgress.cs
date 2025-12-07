@@ -1,10 +1,12 @@
-using JetBrains.Annotations;
 using UnityEngine;
 
 public class TaskProgress : MonoBehaviour
 {
     public static TaskProgress Instance;
-    public bool moonDoorUnlocked = false;
+
+    //use this to see if both tasks are completed
+    public bool bedTaskCompleted = false;
+    public bool potatoTaskCompleted = false;
 
     
 
