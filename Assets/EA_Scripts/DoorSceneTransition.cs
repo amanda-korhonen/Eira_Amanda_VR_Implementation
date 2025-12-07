@@ -8,9 +8,11 @@ public class DoorSceneTransition : Interactive
     //Controls if a door is locked or unlocked at the start of the game
     [SerializeField] private bool isUnlocked = false;
 
+    //All audio stuff
     public AudioClip audioClipDoorLocked;
     public float audioVolume = 1.0f;
     public AudioClip audioClipDoorUnlocked;
+
 
     void Start()
     {
@@ -30,7 +32,6 @@ public class DoorSceneTransition : Interactive
         Debug.Log("Door is now unlocked");
     }
 
-
     public new void Interact()
     {
         //Checks if both tasks are completed
@@ -39,11 +40,8 @@ public class DoorSceneTransition : Interactive
         TaskProgress.Instance.potatoTaskCompleted)
         {
             UnlockDoor();
-        } else
-        {
-            Debug.Log("One or more tasks need to be completed first.");
-        }
-        
+        } 
+
         if (!isUnlocked)
         {
             Debug.Log("Door is locked");
@@ -67,7 +65,7 @@ public class DoorSceneTransition : Interactive
                 GameObject tempAudioSourceUnlocked = new GameObject("TempAudioUnclocked");
                 AudioSource audioSource = tempAudioSourceUnlocked.AddComponent<AudioSource>();
                 audioSource.clip = audioClipDoorUnlocked;
-                audioSource.volume = audioVolume;
+                audioSource.volume = 0.5f;
                 audioSource.Play();
                 //Debug.Log("Playing audio clip with volume: " + audioVolume);
                 Destroy(tempAudioSourceUnlocked, audioClipDoorUnlocked.length);

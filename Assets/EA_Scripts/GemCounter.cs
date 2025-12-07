@@ -8,6 +8,8 @@ public class GemCounter : MonoBehaviour
     public TMP_Text counterText;
     public static GemCounter Instance;
 
+    public AudioClip audioLevelCompleted;
+
     private bool hasTriggeredUnlock = false;
     private void Awake()
     {
@@ -24,13 +26,20 @@ public class GemCounter : MonoBehaviour
         collected++;
         UpdateUI();
 
-        if(!hasTriggeredUnlock && collected >= toBeCollected)
+        if (!hasTriggeredUnlock && collected >= toBeCollected)
         {
             hasTriggeredUnlock = true;
 
-            if (TaskProgress.Instance != null)
+            if (TaskProgress.Instance != null && audioLevelCompleted != null)
             {
                 TaskProgress.Instance.bedTaskCompleted = true;
+                GameObject tempAudioSourceCompleted = new GameObject("TempAudioCompleted");
+                AudioSource audioSource = tempAudioSourceCompleted.AddComponent<AudioSource>();
+                audioSource.clip = audioLevelCompleted;
+                audioSource.volume = 0.5f;
+                audioSource.Play();
+                //Debug.Log("Playing audio clip with volume: " + audioVolume);
+                Destroy(tempAudioSourceCompleted, audioLevelCompleted.length);
                 Debug.Log("Bedroom task completed!");
             }
             else
