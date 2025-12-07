@@ -3580,7 +3580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collected: 0
-  toBeCollected: 5
+  toBeCollected: 1
   counterText: {fileID: 322695358344002323}
   audioClip: {fileID: 8300000, guid: 0412e3dc064bc2144871257b6e850538, type: 3}
   audioVolume: 1

@@ -21,14 +21,6 @@ public class DoorSceneTransition : Interactive
         {
             Debug.LogError("SceneTransitionManager not found in the scene!");
         }
-        //Checks if both tasks are completed
-        if (TaskProgress.Instance != null && TaskProgress.Instance.bedTaskCompleted && TaskProgress.Instance.potatoTaskCompleted)
-        {
-            UnlockDoor();
-        } else
-        {
-            Debug.Log("One or more tasks need to be completed first.");
-        }
 
     }
 
@@ -41,6 +33,17 @@ public class DoorSceneTransition : Interactive
 
     public new void Interact()
     {
+        //Checks if both tasks are completed
+        if (TaskProgress.Instance != null && 
+        TaskProgress.Instance.bedTaskCompleted && 
+        TaskProgress.Instance.potatoTaskCompleted)
+        {
+            UnlockDoor();
+        } else
+        {
+            Debug.Log("One or more tasks need to be completed first.");
+        }
+        
         if (!isUnlocked)
         {
             Debug.Log("Door is locked");

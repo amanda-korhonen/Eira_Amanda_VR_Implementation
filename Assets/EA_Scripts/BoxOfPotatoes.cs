@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEditor.Experimental.GraphView;
 
 public class BoxOfPotatoes : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class BoxOfPotatoes : MonoBehaviour
     public AudioClip audioClip;
     public float audioVolume = 1.0f;
 
+    //room completion logic 
+    private bool hasTriggeredUnlock = false;
     private void UpdateUI()
     {
         counterText.text = $"{collected}/{toBeCollected}";
@@ -31,6 +34,19 @@ public class BoxOfPotatoes : MonoBehaviour
             collected++;
             UpdateUI(); //update UI (aka counter) only when triggered
             CollectionEvent();
+            
+            if(!hasTriggeredUnlock && collected >= toBeCollected)
+            {
+                hasTriggeredUnlock = true;
+                if (TaskProgress.Instance != null)
+                {
+                    TaskProgress.Instance.potatoTaskCompleted = true;
+                    Debug.Log("Potato task completed!");
+                } else
+                {
+                    Debug.LogError("TaskProgress is NULL — it is NOT in the scene!");
+                }
+            }
         }
     }
 
@@ -41,6 +57,14 @@ public class BoxOfPotatoes : MonoBehaviour
         {
             collected--;
             UpdateUI(); //update UI (aka counter) only when triggered
+            if(hasTriggeredUnlock && collected < toBeCollected)
+            {
+                TaskProgress.Instance.potatoTaskCompleted = false;
+                Debug.Log("Potato task not yet done.");
+            }else
+            {
+                Debug.LogError("TaskProgress is NULL — it is NOT in the scene!");
+            }
         }
     }
 
