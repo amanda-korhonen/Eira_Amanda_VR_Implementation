@@ -2620,13 +2620,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4980681244291824528}
     m_Modifications:
+    - target: {fileID: 2144185599371705781, guid: 7cca6a21ce4241a48859183cd8dae28f, type: 3}
+      propertyPath: grabSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3130301553958238798, guid: 7cca6a21ce4241a48859183cd8dae28f, type: 3}
       propertyPath: m_Name
       value: GoodPotato
       objectReference: {fileID: 0}
     - target: {fileID: 3537170361327357987, guid: 7cca6a21ce4241a48859183cd8dae28f, type: 3}
       propertyPath: sceneViewId
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3927699765124227310, guid: 7cca6a21ce4241a48859183cd8dae28f, type: 3}
       propertyPath: m_LocalPosition.x

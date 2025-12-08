@@ -34,7 +34,7 @@ public class DoorSceneTransition : Interactive
 
     public new void Interact()
     {
-        //Checks if both tasks are completed
+        //Checks if both tasks are completed edit if you add more tasks
         if (TaskProgress.Instance != null && 
         TaskProgress.Instance.bedTaskCompleted && 
         TaskProgress.Instance.potatoTaskCompleted)

@@ -68,7 +68,8 @@ public class Grabbable : Interactive
         if (grabbed != transform)
         {
             grabbed = transform;
-            grabDistance = Vector3.Distance(cam.position, transform.position);
+            //grabDistance = Vector3.Distance(cam.position, transform.position);
+            grabDistance = 3.0f;
         }
         else
             grabbed = null;
@@ -83,6 +84,7 @@ public class Grabbable : Interactive
 
         if (grabbed == transform)
         {
+
             Vector3 targetPoint = cam.position + cam.forward * grabDistance;
             rb.linearVelocity = (targetPoint - transform.position) * grabSpeed;
         }
