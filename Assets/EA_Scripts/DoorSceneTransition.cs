@@ -10,7 +10,7 @@ public class DoorSceneTransition : Interactive
 
     //All audio stuff
     public AudioClip audioClipDoorLocked;
-    public float audioVolume = 1.0f;
+    public float audioVolume = 0.5f;
     public AudioClip audioClipDoorUnlocked;
 
 

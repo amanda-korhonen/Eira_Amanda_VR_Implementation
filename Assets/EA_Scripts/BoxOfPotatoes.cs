@@ -40,7 +40,7 @@ public class BoxOfPotatoes : MonoBehaviour
                 hasTriggeredUnlock = true;
                 if (TaskProgress.Instance != null && audioLevelCompleted != null)
                 {
-                    TaskProgress.Instance.potatoTaskCompleted = true;
+                    TaskProgress.Instance.CompletePotatoTask();
 
                     GameObject tempAudioSourceCompleted = new GameObject("TempAudioCompleted");
                     AudioSource audioSource = tempAudioSourceCompleted.AddComponent<AudioSource>();

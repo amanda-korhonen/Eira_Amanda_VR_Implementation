@@ -1,25 +1,32 @@
 using UnityEngine;
 using TMPro;
+using System;
 
 public class TaskCompletionUI : MonoBehaviour
 {
-    [SerializeField] private TMP_Text doneText;
+    [SerializeField] private TMP_Text bedDoneText;
+    [SerializeField] private TMP_Text potatoDoneText;
 
-    private void Start()
-    {
-        // hide text at the start
-        doneText.gameObject.SetActive(false);
-    }
-
-    private void Update()
+    private void OnEnable()
     {
         if (TaskProgress.Instance != null)
         {
-            if (TaskProgress.Instance.bedTaskCompleted &&
-                TaskProgress.Instance.potatoTaskCompleted)
-            {
-                doneText.gameObject.SetActive(true);
-            }
+            TaskProgress.Instance.OnTaskCompleted += RefreshUI;
+            RefreshUI();
         }
+    }
+
+    private void OnDisable()
+    {
+        if (TaskProgress.Instance != null)
+        {
+            TaskProgress.Instance.OnTaskCompleted -= RefreshUI;
+        }
+    }
+
+    private void RefreshUI()
+    {
+        bedDoneText.gameObject.SetActive(TaskProgress.Instance.bedTaskCompleted);
+        potatoDoneText.gameObject.SetActive(TaskProgress.Instance.potatoTaskCompleted);
     }
 }

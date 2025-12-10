@@ -32,7 +32,7 @@ public class GemCounter : MonoBehaviour
 
             if (TaskProgress.Instance != null && audioLevelCompleted != null)
             {
-                TaskProgress.Instance.bedTaskCompleted = true;
+                TaskProgress.Instance.CompleteBedTask();
                 GameObject tempAudioSourceCompleted = new GameObject("TempAudioCompleted");
                 AudioSource audioSource = tempAudioSourceCompleted.AddComponent<AudioSource>();
                 audioSource.clip = audioLevelCompleted;
