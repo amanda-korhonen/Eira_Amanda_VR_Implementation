@@ -6,23 +6,18 @@ using Photon.Pun;
 public class SceneTransitionManager : MonoBehaviour
 {
     public FadeScreen fadeScreen;
+    private bool isLoadingScene = false;
 
-    // Currently 12/2025 the regular GoToScene is not in use
-    public void GoToScene(int sceneIndex)
-    {
-        StartCoroutine(GoToSceneRoutine(sceneIndex));
-    }
-
-    IEnumerator GoToSceneRoutine(int sceneIndex)
-    {
-        fadeScreen.FadeOut();
-        yield return new WaitForSeconds(fadeScreen.fadeDuration);
-
-        //Launch the new scene
-    }
     // We use async below to help with latency
     public void GoToSceneAsync(int sceneIndex)
     {
+        if (isLoadingScene) //makes sure that scene loads only once
+        {
+            return;
+        }
+
+        isLoadingScene = true;
+        
         StartCoroutine(GoToSceneAsyncRoutine(sceneIndex));
     }
 
@@ -39,7 +34,6 @@ public class SceneTransitionManager : MonoBehaviour
             timer += Time.deltaTime;
             yield return null;
         }
-
         operation.allowSceneActivation = true;
     }
 }

@@ -604,7 +604,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: b8b2f7f526c5b034b8712d8d895d2b8b, type: 3}
     - target: {fileID: 8173596068610002586, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
       propertyPath: twistMultiplierOverride
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

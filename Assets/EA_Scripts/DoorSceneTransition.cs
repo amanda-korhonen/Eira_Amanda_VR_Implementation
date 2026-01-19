@@ -45,32 +45,21 @@ public class DoorSceneTransition : Interactive
         if (!isUnlocked)
         {
             Debug.Log("Door is locked");
-            if (audioClipDoorLocked != null)
+            if (audioClipDoorLocked != null && AudioManager.Instance != null )
             {
-                GameObject tempAudioSourceLocked = new GameObject("TempAudioLocked");
-                AudioSource audioSource = tempAudioSourceLocked.AddComponent<AudioSource>();
-                audioSource.clip = audioClipDoorLocked;
-                audioSource.volume = audioVolume;
-                audioSource.Play();
-                //Debug.Log("Playing audio clip with volume: " + audioVolume);
-                Destroy(tempAudioSourceLocked, audioClipDoorLocked.length);
+                AudioManager.Instance.PlayOneShot(audioClipDoorLocked, audioVolume);
             }
             return;
         }
 
         if (rb != null && sceneTransitionManager != null)
         {
-            if (audioClipDoorUnlocked != null)
+            if (audioClipDoorUnlocked != null && AudioManager.Instance != null)
             {
-                GameObject tempAudioSourceUnlocked = new GameObject("TempAudioUnclocked");
-                AudioSource audioSource = tempAudioSourceUnlocked.AddComponent<AudioSource>();
-                audioSource.clip = audioClipDoorUnlocked;
-                audioSource.volume = 0.5f;
-                audioSource.Play();
-                //Debug.Log("Playing audio clip with volume: " + audioVolume);
-                Destroy(tempAudioSourceUnlocked, audioClipDoorUnlocked.length);
+                AudioManager.Instance.PlayOneShot(audioClipDoorUnlocked, audioVolume);
             }
             sceneTransitionManager.GoToSceneAsync(targetScene);
+
         }
     }
 }

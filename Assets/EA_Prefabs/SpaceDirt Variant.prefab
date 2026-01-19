@@ -63,7 +63,11 @@ PrefabInstance:
     - target: {fileID: 7087517543871856419, guid: 39fe2876161c78a4da94c15806eefe2c, type: 3}
       propertyPath: audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 8bd7e13d517c11245ae3a313a8658d2c, type: 3}
+      objectReference: {fileID: 8300000, guid: c915266980f26c24aac1450be694e312, type: 3}
+    - target: {fileID: 7087517543871856419, guid: 39fe2876161c78a4da94c15806eefe2c, type: 3}
+      propertyPath: dwellTimerOverride
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7087517543871856419, guid: 39fe2876161c78a4da94c15806eefe2c, type: 3}
       propertyPath: interactModeOverride
       value: 1

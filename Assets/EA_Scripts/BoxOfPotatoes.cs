@@ -38,18 +38,13 @@ public class BoxOfPotatoes : MonoBehaviour
             if (!hasTriggeredUnlock && collected >= toBeCollected)
             {
                 hasTriggeredUnlock = true;
-                if (TaskProgress.Instance != null && audioLevelCompleted != null)
+                if (TaskProgress.Instance != null && audioLevelCompleted != null && AudioManager.Instance != null)
                 {
                     TaskProgress.Instance.CompletePotatoTask();
 
-                    GameObject tempAudioSourceCompleted = new GameObject("TempAudioCompleted");
-                    AudioSource audioSource = tempAudioSourceCompleted.AddComponent<AudioSource>();
-                    audioSource.clip = audioLevelCompleted;
-                    audioSource.volume = 0.5f;
-                    audioSource.Play();
-                    //Debug.Log("Playing audio clip with volume: " + audioVolume);
-                    Destroy(tempAudioSourceCompleted, audioLevelCompleted.length);
-                    Debug.Log("Potato task completed!");
+                    AudioManager.Instance.PlayOneShot(audioLevelCompleted, 0.5f);
+                    
+                    //Debug.Log("Potato task completed!");
                 }
                 else
                 {
@@ -71,6 +66,7 @@ public class BoxOfPotatoes : MonoBehaviour
             // to counteract that scenario when a player thinks that they are done  
             // but the potato yeeted itself when the player was not looking. 
 
+
             /*if(hasTriggeredUnlock && collected < toBeCollected)
             {
                 TaskProgress.Instance.potatoTaskCompleted = false;
@@ -82,18 +78,11 @@ public class BoxOfPotatoes : MonoBehaviour
         }
     }
 
-
     void CollectionEvent()
     {
-        if (audioClip != null)
+        if (audioClip != null && AudioManager.Instance != null)
         {
-            GameObject tempAudioSource = new GameObject("TempAudio");
-            AudioSource audioSource = tempAudioSource.AddComponent<AudioSource>();
-            audioSource.clip = audioClip;
-            audioSource.volume = audioVolume;
-            audioSource.Play();
-            //Debug.Log("Playing audio clip with volume: " + audioVolume);
-            Destroy(tempAudioSource, audioClip.length);
+            AudioManager.Instance.PlayOneShot(audioClip, audioVolume);
         }
 
     }

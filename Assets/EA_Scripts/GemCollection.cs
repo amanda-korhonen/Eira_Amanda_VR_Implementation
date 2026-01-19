@@ -19,7 +19,9 @@ public class GemCollection : Interactive
     public new void Interact()
     {
         if (pv == null) return;
-        pv.RPC("CollectionEvent", RpcTarget.AllBuffered);
+        pv.RPC("CollectionEvent", RpcTarget.All); 
+        // Changed from .AllBuffered to All not sure if did anything
+        // If multiplayer is implemented sometime could cause problems or smth
 
     }
 
@@ -27,17 +29,12 @@ public class GemCollection : Interactive
   
     void CollectionEvent()
     {
-        if (audioClip != null)
+        if (audioClip != null && AudioManager.Instance != null)
         {
-            GameObject tempAudioSource = new GameObject("TempAudio");
-            AudioSource audioSource = tempAudioSource.AddComponent<AudioSource>();
-            audioSource.clip = audioClip;
-            audioSource.volume = audioVolume;
-            audioSource.Play();
-            //Debug.Log("Playing audio clip with volume: " + audioVolume);
-            Destroy(tempAudioSource, audioClip.length);
+            AudioManager.Instance.PlayOneShot(audioClip, audioVolume);
         }
         //Debug.Log("Gem collected!");
+
         if (GemCounter.Instance != null)
         {
             GemCounter.Instance.AddGem();
