@@ -20,6 +20,7 @@ public class SceneTransitionManager : MonoBehaviour
 
         //Launch the new scene
     }
+    // We use async below to help with latency
     public void GoToSceneAsync(int sceneIndex)
     {
         StartCoroutine(GoToSceneAsyncRoutine(sceneIndex));

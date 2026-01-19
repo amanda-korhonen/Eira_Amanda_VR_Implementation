@@ -40,19 +40,4 @@ public class PotatoDistributer : MonoBehaviour {
             Instantiate(prefab, randomPos, Quaternion.identity);
         }
     }
-
-    void CollectionEvent()
-    {
-        if (audioClip != null)
-        {
-            GameObject tempAudioSource = new GameObject("TempAudio");
-            AudioSource audioSource = tempAudioSource.AddComponent<AudioSource>();
-            audioSource.clip = audioClip;
-            audioSource.volume = audioVolume;
-            audioSource.Play();
-            //Debug.Log("Playing audio clip with volume: " + audioVolume);
-            Destroy(tempAudioSource, audioClip.length);
-        }
-
-    }
 }

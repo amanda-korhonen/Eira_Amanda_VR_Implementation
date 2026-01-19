@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 8bd7e13d517c11245ae3a313a8658d2c, type: 3}
+    - target: {fileID: 7087517543871856419, guid: 39fe2876161c78a4da94c15806eefe2c, type: 3}
+      propertyPath: interactModeOverride
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 8355293306676150000, guid: 39fe2876161c78a4da94c15806eefe2c, type: 3}
