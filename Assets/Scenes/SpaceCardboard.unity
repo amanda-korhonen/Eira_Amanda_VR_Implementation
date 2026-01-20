@@ -210,7 +210,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: b8b2f7f526c5b034b8712d8d895d2b8b, type: 3}
     - target: {fileID: 8173596068610002586, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
       propertyPath: twistMultiplierOverride
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -925,7 +925,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1799306723}
-  - {fileID: 1388196425}
   - {fileID: 1404039028}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1160,52 +1159,6 @@ LightingSettings:
   m_PVRFilteringAtrousPositionSigmaIndirect: 2
   m_PVRFilteringAtrousPositionSigmaAO: 1
   m_RespectSceneVisibilityWhenBakingGI: 0
---- !u!1 &1388196424
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1388196425}
-  - component: {fileID: 1388196426}
-  m_Layer: 0
-  m_Name: _Network
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1388196425
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1388196424}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1041445005}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1388196426
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1388196424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62d8c0edb9b25ca4cbfad3f69bdc6a7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  gameVersion: 0.1
-  headAvatarPrefab: {fileID: 898584901165668828, guid: e104d55bc0d750642a499840e3dd2a82, type: 3}
 --- !u!1001 &1404039027
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1366,7 +1319,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: b8b2f7f526c5b034b8712d8d895d2b8b, type: 3}
     - target: {fileID: 8173596068610002586, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
       propertyPath: twistMultiplierOverride
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8674958570814315680, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
       propertyPath: m_VerticalAlignment
@@ -3180,7 +3133,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: b8b2f7f526c5b034b8712d8d895d2b8b, type: 3}
     - target: {fileID: 8173596068610002586, guid: 706dde11efd50cb4f86356f74ebfceac, type: 3}
       propertyPath: twistMultiplierOverride
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

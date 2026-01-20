@@ -72,7 +72,9 @@ PrefabInstance:
       propertyPath: interactModeOverride
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1197371675370533831, guid: 39fe2876161c78a4da94c15806eefe2c, type: 3}
+    - {fileID: 7288022033143920031, guid: 39fe2876161c78a4da94c15806eefe2c, type: 3}
     m_RemovedGameObjects:
     - {fileID: 8355293306676150000, guid: 39fe2876161c78a4da94c15806eefe2c, type: 3}
     m_AddedGameObjects:
